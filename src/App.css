@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+:root{
+  --cafe-clarito: #e5dabe;
+  --cafe-medio: #d7ae81;
+  --cafe-oscuro: #703B1B;
+}
+
+body{
+  background-color: var(--cafe-medio);
+}
+/*General*/
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+} 
+
+
+/*Seccion donde aparecen las tareas*/
+.Tasks{
+  background-color: var(--cafe-clarito);
+  border-radius: 20px;
+
+  padding: 10px 20px;
+  
+  width: 40%;
+  height: 40pc;
+
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Tareas*/
+.Task{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+}
+
+.TaskText{
+  display: flex;
+}
+
+/*Tachar el texto al completar la tarea*/
+.TaskText input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  color: #2f2f2f; 
+}
+
+#imagen img{
+  width: 40px;
+  height: 40px;
+}
+
+/*Seccion del formulario para poner las tareas*/
+.FormularioTask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0 20px;
+  gap: 10px;
+
+  width: 40%;
+  height: 80%;
+  
+}
+
+.FormularioTask h1{
+  font-family: "Caprasimo", serif;
+  font-size: 4rem; 
+  font-weight: 200;
+}
+
+/*Seccion del input para agregar la tarea*/
+.InputTask{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Input*/
+.inputTask  {
+  border: 0;
+  background-color: var(--cafe-clarito);
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 4px;
+  outline: none;
+
+  width: 100%;
+  height: 25px;
+}
+
+/*Boton para subir las tareas */
+
+.FormularioTask button{
+  border: 0;
+  padding: 4px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: var(--cafe-clarito);
+  color: var(--cafe-oscuro);
+}
+
+.FormularioTask button:hover{
+  background-color: var(--cafe-oscuro);
+  color: var(--cafe-clarito);
+  transition: .5s;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 745px) {
+  main{
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .Tasks{
+    height: 1000px;
+    width: 80%;
+  }
+  
+  .FormularioTask{
+    height: 400px;
+    width: 80%;
+  }
+  
+  .FormularioTask img{
+    width: 160px;
+    height: 160px;
+  }
+
+  .FormularioTask h1{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .InputTask{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 289px){
+  .FormularioTask{
+    text-align: center;
+  }
+}
