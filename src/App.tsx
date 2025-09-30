@@ -61,7 +61,7 @@ function App() {
           <input className='inputTask' type="text" placeholder='Agrega tu tarea'  onChange={ActualizarText} value={text} onKeyDown={inputKeyDown}/>
           <button onClick={AddTask} >Submit</button>
         </div>
-        <img src="./Capibara.png" alt="capibara" />
+        <img src="../public/Capibara.png" alt="capibara" />
       </div>
 
       <div className='Tasks'>

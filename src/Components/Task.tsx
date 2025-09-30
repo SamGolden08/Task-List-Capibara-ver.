@@ -1,3 +1,5 @@
+import CapibaraTrash from "../../public/CapibaraTrash.png"
+
 //Creacion del tipo 
 type TaskProps = {
   task: string;            // cada tarea es un string
@@ -18,7 +20,7 @@ export default function Task({ task, Eliminar, index }: TaskProps) {
 
       <div id="imagen" onClick={() => Eliminar(index)}>
 
-        <img src="./public/CapibaraTrash.png" alt="TrashCapibara" />
+        <img src={CapibaraTrash} alt="TrashCapibara" />
 
       </div>
 
