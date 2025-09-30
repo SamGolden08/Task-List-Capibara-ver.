@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Task from "./Components/Task.jsx"
+import Capibara from "../public/Capibara.png"
 import './App.css'
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
           <input className='inputTask' type="text" placeholder='Agrega tu tarea'  onChange={ActualizarText} value={text} onKeyDown={inputKeyDown}/>
           <button onClick={AddTask} >Submit</button>
         </div>
-        <img src="../public/Capibara.png" alt="capibara" />
+        <img src={Capibara} alt="capibara" />
       </div>
 
       <div className='Tasks'>
