@@ -58,6 +58,10 @@ main{
   display: flex;
 }
 
+.TaskText input{
+  margin-right: 10px;
+}
+
 /*Tachar el texto al completar la tarea*/
 .TaskText input[type="checkbox"]:checked + p {
   text-decoration: line-through;
